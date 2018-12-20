@@ -2,6 +2,15 @@
   <v-app :dark="isDark">
     <v-navigation-drawer :mini-variant="miniVariant" :clipped="clipped" v-model="drawer" fixed app>
       <v-list>
+        <v-list-tile avatar>
+          <v-btn icon @click.native.stop="miniVariant = !miniVariant">
+            <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
+          </v-btn>
+
+          <v-btn icon @click.native.stop="clipped = !clipped">
+            <v-icon>web</v-icon>
+          </v-btn>
+        </v-list-tile>
         <v-list-tile router :to="item.to" :key="i" v-for="(item, i) in items" exact>
           <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
@@ -15,12 +24,7 @@
 
     <v-toolbar fixed app :clipped-left="clipped" dense>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-btn icon @click.native.stop="miniVariant = !miniVariant">
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-      </v-btn>
-      <v-btn icon @click.native.stop="clipped = !clipped">
-        <v-icon>web</v-icon>
-      </v-btn>
+
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-switch hide-details label="Dark theme" v-model="isDark"></v-switch>
@@ -47,11 +51,11 @@
     </v-content>
     <v-navigation-drawer temporary :right="right" v-model="rightDrawer" fixed>
       <v-list>
-        <v-list-tile @click.native="right = !right">
+        <v-list-tile>
           <v-list-tile-action>
             <v-icon light>compare_arrows</v-icon>
           </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
+          <v-list-tile-title>Announcements</v-list-tile-title>
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
@@ -64,10 +68,7 @@
 </template>
 
 <script>
-
-
-import * as easings from 'vuetify/es5/util/easing-patterns'
-
+import * as easings from "vuetify/es5/util/easing-patterns";
 
 export default {
   computed: {
@@ -93,7 +94,7 @@ export default {
       easing: "easeInOutCubic",
       easings: Object.keys(easings),
 
-      isDark: true,
+      isDark: false,
       currentDate: new Date().getFullYear(),
       clipped: false,
       drawer: false,
@@ -115,7 +116,7 @@ export default {
           to: "/gallery"
         }
       ],
-      miniVariant: true,
+      miniVariant: false,
       right: true,
       rightDrawer: false,
       title: "Ethiopia Hacks"
@@ -126,9 +127,9 @@ export default {
       this.isDark = !this.isDark;
     },
 
-    scroll:function(dest) {
+    scroll: function(dest) {
       this.selector = dest;
-      this.$vuetify.goTo(this.target, this.options)
+      this.$vuetify.goTo(this.target, this.options);
     }
   }
 };
