@@ -307,7 +307,7 @@
           <v-flex xs12 sm4 offset-sm1>
             <v-card class="elevation-0 transparent">
               <v-card-title primary-title class="layout justify-center">
-                <div class="headline">Contact us</div>
+                <div class="headline">Contact us </div>
               </v-card-title>
               <v-card-text>Do you want to contact the organizers? Please don't hesitate to contact through the following addresses.</v-card-text>
               <v-list class="transparent">
@@ -336,6 +336,7 @@
                   </v-list-tile-content>
                 </v-list-tile>
               </v-list>
+              
             </v-card>
           </v-flex>
         </v-layout>
@@ -383,33 +384,38 @@ export default {
       faqList: [
         {
           question: 'What is Hackathon?',
-          answer: 'Lorem ipsum dolor sit amet, at aliquam vivendum vel, everti delicatissimi cu eos. Dico iuvaret debitis mel an, et cum zril menandri. Eum in consul legimus accusam. Ea dico abhorreant duo, quo illum minimum incorrupte no, nostro voluptaria sea eu. Suas eligendi ius at, at nemore equidem est. Sed in error hendrerit, in consul constituam cum.'
+          answer: 'A hackathon is usually a day long (can be 36 hours, 48 hours, etc.) coding competition where software programmers, developers, designers, etc. come together to build and design something cool.'
         },
         {
-          question: 'What is Hackathon?',
-          answer: 'Lorem ipsum dolor sit amet, at aliquam vivendum vel, everti delicatissimi cu eos. Dico iuvaret debitis mel an, et cum zril menandri. Eum in consul legimus accusam. Ea dico abhorreant duo, quo illum minimum incorrupte no, nostro voluptaria sea eu. Suas eligendi ius at, at nemore equidem est. Sed in error hendrerit, in consul constituam cum.'
+          question: 'Who can attend ‘Ethiopia Hack’ hackathon?',
+          answer: 'Anyone who is interested in computer programming and loves to learn and build cool stuff can attend.'
         },
         {
-          question: 'What is Hackathon?',
-          answer: 'Lorem ipsum dolor sit amet, at aliquam vivendum vel, everti delicatissimi cu eos. Dico iuvaret debitis mel an, et cum zril menandri. Eum in consul legimus accusam. Ea dico abhorreant duo, quo illum minimum incorrupte no, nostro voluptaria sea eu. Suas eligendi ius at, at nemore equidem est. Sed in error hendrerit, in consul constituam cum.'
+          question: 'But isn’t hacking illegal? ',
+          answer: 'The word “hack” has so much negativity attached to it that most people think hackathons are a way to “hack” into something. NOOOO. Hacking is basically building something. It could be anything.'
         },
         {
-          question: 'What is Hackathon?',
-          answer: 'Lorem ipsum dolor sit amet, at aliquam vivendum vel, everti delicatissimi cu eos. Dico iuvaret debitis mel an, et cum zril menandri. Eum in consul legimus accusam. Ea dico abhorreant duo, quo illum minimum incorrupte no, nostro voluptaria sea eu. Suas eligendi ius at, at nemore equidem est. Sed in error hendrerit, in consul constituam cum.'
+          question: 'Do I need to have programming experience?',
+          answer: 'Basics of programming is enough.'
         },
         {
-          question: 'What is Hackathon?',
-          answer: 'Lorem ipsum dolor sit amet, at aliquam vivendum vel, everti delicatissimi cu eos. Dico iuvaret debitis mel an, et cum zril menandri. Eum in consul legimus accusam. Ea dico abhorreant duo, quo illum minimum incorrupte no, nostro voluptaria sea eu. Suas eligendi ius at, at nemore equidem est. Sed in error hendrerit, in consul constituam cum.'
+          question: 'How much do I have to pay to attend the hackathon? ',
+          answer: 'It’s FREE. :)'
         },
         {
-          question: 'What is Hackathon?',
-          answer: 'Lorem ipsum dolor sit amet, at aliquam vivendum vel, everti delicatissimi cu eos. Dico iuvaret debitis mel an, et cum zril menandri. Eum in consul legimus accusam. Ea dico abhorreant duo, quo illum minimum incorrupte no, nostro voluptaria sea eu. Suas eligendi ius at, at nemore equidem est. Sed in error hendrerit, in consul constituam cum.'
+          question: 'Is it a team event?',
+          answer: ' Yes. So the whole point of forming teams and working on a project gives you the opportunity to work in a real life setting. I mean seriously, that’s how it works in the industry. You have to learn to work with people from different background, different skill set, etc. What better way than a hackathon to get used to it? Teams include a maximum of 5 people. Our hackathons have “Meet-and-Greet” events before the actual event where you get to talk to attendees and look for teammates.'
+        },
+        {
+          question: 'What can I hack at the hackathon?',
+          answer: 'You can build anything. A website, a web app, Android/iOS App, Chrome extension, whatever you want to on a specific theme that will be given on the hackathon day.'
+        },
+        {
+          question: 'What are the requirements to attend on the hackathon?',
+          answer: 'One requirement is your age must be between 18 to 25. Another requirement is you need to be willing to attend the hackathon for 48 hours.'
         }
-      ],
+      ]
         
-
-      lorem:
-        "Lorem ipsum dolor sit amet, at aliquam vivendum vel, everti delicatissimi cu eos. Dico iuvaret debitis mel an, et cum zril menandri. Eum in consul legimus accusam. Ea dico abhorreant duo, quo illum minimum incorrupte no, nostro voluptaria sea eu. Suas eligendi ius at, at nemore equidem est. Sed in error hendrerit, in consul constituam cum."
     };
   },
 
