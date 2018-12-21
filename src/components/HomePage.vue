@@ -1,21 +1,24 @@
 <template>
   <div>
     <!-- First Parallex -->
-    <section id ="home">
+    <section id="home">
       <v-parallax :src="getImageUrl('banner.jpg')" height="680" alt="banner image">
         <v-layout column align-center justify-center class="white--text">
           <img :src="getImageUrl('logo.png')" alt="Hackathon Logo" height="300">
           <h3 class="display-1 text-xs-center">U.S Embassy in Ethiopia presents</h3>
-          <h3 class="white--text font-weight-bold mb-2 display-2 text-xs-center">Hackathon <span class="display-1">v2.0</span></h3>
+          <h3 class="white--text font-weight-bold mb-2 display-2 text-xs-center">
+            Hackathon
+            <span class="display-1">v2.0</span>
+          </h3>
           <div class="title mb-4 text-xs-center">From Jan 11-13, 2018</div>
           <div class="subheading mb-3 text-xs-center">@ American Center, Addis Ababa</div>
-          <v-btn class="blue lighten-2 mt-5" dark large href="https://goo.gl/HEa1i6">Register Here</v-btn>
+          <v-btn class="blue lighten-2 mt-5" dark large href="https://goo.gl/HEa1i6" target="blank">Register Here</v-btn>
         </v-layout>
       </v-parallax>
     </section>
 
     <!-- Featured Text -->
-    <section id ="why">
+    <section id="why">
       <v-layout column wrap class="my-5" align-center>
         <v-flex xs12 sm4 class="my-3">
           <div class="text-xs-center">
@@ -35,7 +38,7 @@
                     <div class="headline text-xs-center">Design The Challenge</div>
                   </v-card-title>
                   <v-card-text>
-                    Hackathon boosts your design skill and critical thinking towards solving the challenge. It give you the opportunity to improve your
+                    Hackathon boosts your design skill and critical thinking towards solving the challenge. It gives you the opportunity to improve your
                     skill on how to understand the problem domain or the challenge topic, analze and come up with potential
                     ,feasible solution.
                   </v-card-text>
@@ -98,15 +101,23 @@
         <v-flex xs12 sm4 class="my-3">
           <div class="text-xs-center">
             <h2 class="headline font-weight-medium">Organized by U.S Embassy in Ethiopia</h2>
-            <span class="subheading">#USInvestsInEthiopians</span><br/>
-            <a href="https://et.usembassy.gov/nofo-for-ethiopia-hacks/" target="blank">NOFO for Ethiopia Hacks</a>
+            <span class="subheading">#USInvestsInEthiopians</span>
+            <br>
+            <a
+              href="https://et.usembassy.gov/nofo-for-ethiopia-hacks/"
+              target="blank"
+            >NOFO for Ethiopia Hacks</a>
           </div>
         </v-flex>
         <v-flex xs12>
           <v-container grid-list-xl>
             <v-layout row wrap align-center>
               <v-flex xs12 md3>
-                <v-card target="blank" href="https://et.usembassy.gov/" class="elevation-0 transparent">
+                <v-card
+                  target="blank"
+                  href="https://et.usembassy.gov/"
+                  class="elevation-0 transparent"
+                >
                   <v-card-text class="text-xs-center">
                     <img :src="getImageUrl('us_embassy.png')" alt="Hackathon Logo" height="150">
                   </v-card-text>
@@ -117,7 +128,11 @@
               </v-flex>
 
               <v-flex xs12 md3>
-                <v-card class="elevation-0 transparent" href="https://www.usaid.gov/ethiopia" target="blank">
+                <v-card
+                  class="elevation-0 transparent"
+                  href="https://www.usaid.gov/ethiopia"
+                  target="blank"
+                >
                   <v-card-text class="text-xs-center">
                     <img :src="getImageUrl('usaid.png')" alt="Hackathon Logo" height="150">
                   </v-card-text>
@@ -128,7 +143,11 @@
               </v-flex>
 
               <v-flex xs12 md3>
-                <v-card class="elevation-0 transparent" href="https://www.meetup.com/GDG-Addis" target="blank">
+                <v-card
+                  class="elevation-0 transparent"
+                  href="https://www.meetup.com/GDG-Addis"
+                  target="blank"
+                >
                   <v-card-text class="text-xs-center">
                     <img :src="getImageUrl('gdg_addis.png')" alt="Hackathon Logo" height="150">
                   </v-card-text>
@@ -139,7 +158,11 @@
               </v-flex>
 
               <v-flex xs12 md3>
-                <v-card class="elevation-0 transparent" href="http://cawee-ethiopia.com/" target="blank">
+                <v-card
+                  class="elevation-0 transparent"
+                  href="http://cawee-ethiopia.com/"
+                  target="blank"
+                >
                   <v-card-text class="text-xs-center">
                     <img :src="getImageUrl('cawee.png')" alt="Hackathon Logo" height="150">
                   </v-card-text>
@@ -156,111 +179,44 @@
 
     <!-- Time Line -->
     <section id="timeline">
-      <v-layout column align-center>
+      <v-layout justify-center>
         <v-flex xs12 md6>
-          <v-timeline>
-            <v-timeline-item color="purple lighten-2" fill-dot right>
-              <v-card>
-                <v-card-title class="purple lighten-2">
-                  <v-icon dark size="42" class="mr-3">mdi-magnify</v-icon>
-                  <h2 class="display-1 white--text font-weight-light">Hackathon v1.0</h2>
-                </v-card-title>
-                <v-container>
-                  <v-layout>
-                    <v-flex xs10>
-                      <p>"Entreprunership and youth"</p>
-                      <p>Nov 16 to 18, 2018 at American Center, Addis Ababa.</p>
-                    </v-flex>
-                    <v-flex xs2>
-                      <v-icon size="64">mdi-calendar-text</v-icon>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-card>
-            </v-timeline-item>
+          <v-timeline align-top>
+            <v-timeline-item
+              v-for="(timeline, key) in timelines"
+              :key="key"
+              :color="timeline.color"
+              fill-dot
+              :icon="timeline.icon"
+            >
+              <v-card :color="timeline.color" dark>
+                <v-card-title class="title"> {{timeline.title}} </v-card-title>
+                <v-card-text class="white text--primary">
+                  <p>{{timeline.theme}}</p>
+                  <p>{{timeline.description}}</p>
+                  <v-btn v-if="timeline.isPassed" color="success" outline class="mx-0">Passed</v-btn>
 
-            <v-timeline-item color="amber lighten-1" fill-dot left small>
-              <v-card>
-                <v-card-title class="amber lighten-1 justify-end">
-                  <h2 class="display-1 mr-3 white--text font-weight-light">Hackathon v2.0</h2>
-                  <v-icon dark size="42">mdi-home-outline</v-icon>
-                </v-card-title>
-                <v-container>
-                  <v-layout>
-                    <v-flex xs12>
-                      <p>"comming soon.."</p>
-                      <p>Jan 11 to 13, 2019 at American Center, Addis Ababa.</p>
-                      <v-btn
-                        class="blue lighten-2 mt-5"
-                        dark
-                        
-                        href="https://goo.gl/HEa1i6"
-                      >Register Here</v-btn>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-card>
-            </v-timeline-item>
+                  <v-btn v-if="!timeline.isPassed && timeline.isNext" href="https://goo.gl/HEa1i6" target="blank" :color="timeline.color" outline>Register Now!</v-btn>
+                </v-card-text>
 
-            <v-timeline-item color="cyan lighten-1" fill-dot right>
-              <v-card>
-                <v-card-title class="cyan lighten-1">
-                  <v-icon class="mr-3" dark size="42">mdi-email-outline</v-icon>
-                  <h2 class="display-1 white--text font-weight-light">Hackathon v3.0</h2>
-                </v-card-title>
-                <v-container>
-                  <v-layout>
-                    <v-flex xs12>
-                      <p>Comming Soon...</p>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-card>
-            </v-timeline-item>
-
-            <v-timeline-item color="red lighten-1" fill-dot left small>
-              <v-card>
-                <v-card-title class="red lighten-1 justify-end">
-                  <h2 class="display-1 mr-3 white--text font-weight-light">Hackathon v4.0</h2>
-                  <v-icon dark size="42">mdi-account-multiple-outline</v-icon>
-                </v-card-title>
-                <v-container>
-                  <v-layout>
-                    <v-flex xs2>
-                      <v-icon size="64">mdi-server-network</v-icon>
-                    </v-flex>
-                    <v-flex xs10>
-                      <p>Comming Soon...</p>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-card>
-            </v-timeline-item>
-
-            <v-timeline-item color="green lighten-1" fill-dot right>
-              <v-card>
-                <v-card-title class="green lighten-1">
-                  <v-icon class="mr-3" dark size="42">mdi-phone-in-talk</v-icon>
-                  <h2 class="display-1 white--text font-weight-light">Hackathon v5.0</h2>
-                </v-card-title>
-                <v-container>
-                  <v-layout>
-                    <v-flex>
-                      <p>Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.</p>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
               </v-card>
             </v-timeline-item>
           </v-timeline>
         </v-flex>
       </v-layout>
+      
     </section>
 
-    
+    <!-- Third Parallex -->
+    <section>
+      <v-parallax :src="getImageUrl('teams.jpg')" height="200">
+        <v-layout column align-center justify-center></v-layout>
+      </v-parallax>
+    </section>
 
     <!-- FAQ -->
     <section id="faq">
+      <br>
       <v-layout column align-center>
         <h4 class="display-1">FAQ</h4>
       </v-layout>
@@ -280,12 +236,11 @@
             </v-expansion-panel-content>
           </v-expansion-panel>
         </v-flex>
-
       </v-layout>
     </section>
 
     <!-- Contact -->
-    <section id = "contact">
+    <section id="contact">
       <v-container grid-list-xl>
         <v-layout row wrap justify-center class="my-5">
           <v-flex xs12 sm4>
@@ -307,7 +262,7 @@
           <v-flex xs12 sm4 offset-sm1>
             <v-card class="elevation-0 transparent">
               <v-card-title primary-title class="layout justify-center">
-                <div class="headline">Contact us </div>
+                <div class="headline">Contact us</div>
               </v-card-title>
               <v-card-text>Do you want to contact the organizers? Please don't hesitate to contact through the following addresses.</v-card-text>
               <v-list class="transparent">
@@ -336,7 +291,6 @@
                   </v-list-tile-content>
                 </v-list-tile>
               </v-list>
-              
             </v-card>
           </v-flex>
         </v-layout>
@@ -347,11 +301,9 @@
 
 
 <script>
-
-import * as easings from 'vuetify/es5/util/easing-patterns'
+import * as easings from "vuetify/es5/util/easing-patterns";
 
 export default {
-  
   data() {
     return {
       title: '"Ethiopia Hacks" Hackathon v2.0',
@@ -380,42 +332,100 @@ export default {
           exceprt: "New deals available, Join Today"
         }
       ],
-      
+
       faqList: [
         {
-          question: 'What is Hackathon?',
-          answer: 'A hackathon is usually a day long (can be 36 hours, 48 hours, etc.) coding competition where software programmers, developers, designers, etc. come together to build and design something cool.'
+          question: "What is Hackathon?",
+          answer:
+            "A hackathon is usually a day long (can be 36 hours, 48 hours, etc.) coding competition where software programmers, developers, designers, etc. come together to build and design something cool."
         },
         {
-          question: 'Who can attend ‘Ethiopia Hack’ hackathon?',
-          answer: 'Anyone who is interested in computer programming and loves to learn and build cool stuff can attend.'
+          question: "Who can attend ‘Ethiopia Hack’ hackathon?",
+          answer:
+            "Anyone who is interested in computer programming and loves to learn and build cool stuff can attend."
         },
         {
-          question: 'But isn’t hacking illegal? ',
-          answer: 'The word “hack” has so much negativity attached to it that most people think hackathons are a way to “hack” into something. NOOOO. Hacking is basically building something. It could be anything.'
+          question: "But isn’t hacking illegal? ",
+          answer:
+            "The word “hack” has so much negativity attached to it that most people think hackathons are a way to “hack” into something. NOOOO. Hacking is basically building something. It could be anything."
         },
         {
-          question: 'Do I need to have programming experience?',
-          answer: 'Basics of programming is enough.'
+          question: "Do I need to have programming experience?",
+          answer: "Basics of programming is enough."
         },
         {
-          question: 'How much do I have to pay to attend the hackathon? ',
-          answer: 'It’s FREE. :)'
+          question: "How much do I have to pay to attend the hackathon? ",
+          answer: "It’s FREE. :)"
         },
         {
-          question: 'Is it a team event?',
-          answer: ' Yes. So the whole point of forming teams and working on a project gives you the opportunity to work in a real life setting. I mean seriously, that’s how it works in the industry. You have to learn to work with people from different background, different skill set, etc. What better way than a hackathon to get used to it? Teams include a maximum of 5 people. Our hackathons have “Meet-and-Greet” events before the actual event where you get to talk to attendees and look for teammates.'
+          question: "Is it a team event?",
+          answer:
+            " Yes. So the whole point of forming teams and working on a project gives you the opportunity to work in a real life setting. I mean seriously, that’s how it works in the industry. You have to learn to work with people from different background, different skill set, etc. What better way than a hackathon to get used to it? Teams include a maximum of 5 people. Our hackathons have “Meet-and-Greet” events before the actual event where you get to talk to attendees and look for teammates."
         },
         {
-          question: 'What can I hack at the hackathon?',
-          answer: 'You can build anything. A website, a web app, Android/iOS App, Chrome extension, whatever you want to on a specific theme that will be given on the hackathon day.'
+          question: "What can I hack at the hackathon?",
+          answer:
+            "You can build anything. A website, a web app, Android/iOS App, Chrome extension, whatever you want to on a specific theme that will be given on the hackathon day."
         },
         {
-          question: 'What are the requirements to attend on the hackathon?',
-          answer: 'One requirement is your age must be between 18 to 25. Another requirement is you need to be willing to attend the hackathon for 48 hours.'
+          question: "What are the requirements to attend on the hackathon?",
+          answer:
+            "One requirement is your age must be between 18 to 25. Another requirement is you need to be willing to attend the hackathon for 48 hours."
+        }
+      ],
+
+      timelines: [
+        {
+          title: "Hackathon v1.0",
+          theme: '"Entreprunership and Youth"',
+          description: "From Nov 16-8th, 2018 at American Center, Addis Ababa",
+          isPassed: true,
+          isNext: false,
+          isLeft: false,
+          color: "red lighten-2",
+          icon: "check"
+        },
+        {
+          title: "Hackathon v2.0",
+          theme: "Comming Soon...",
+          description: "From Jan 11-13th, 2018 at American Center, Addis Ababa",
+          isPassed: false,
+          isNext: true,
+          isLeft: true,
+          color: "purple darken-1",
+          icon: "star"
+        },
+        {
+          title: "Hackathon v3.0",
+          theme: "Comming Soon...",
+          description: "",
+          isPassed: false,
+          isNext: false,
+          isLeft: false,
+          color: "amber lighten-1",
+          icon: "star"
+        },
+        {
+          title: "Hackathon v4.0",
+          theme: "Comming Soon...",
+          description: "",
+          isPassed: false,
+          isNext: false,
+          isLeft: true,
+          color: "green lighten-1",
+          icon: "star"
+        },
+        {
+          title: "Hackathon v5.0",
+          theme: "Comming Soon...",
+          description: "",
+          isPassed: false,
+          isNext: false,
+          isLeft: false,
+          color: "indigo",
+          icon: "star"
         }
       ]
-        
     };
   },
 

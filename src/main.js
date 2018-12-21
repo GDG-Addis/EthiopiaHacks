@@ -18,6 +18,7 @@ import {
   VTimeline,
   VCard,
   VSwitch,
+  VDivider,
   transitions,
   
 } from 'vuetify'
@@ -38,6 +39,7 @@ Vue.use(Vuetify, {
     VTimeline,
     VCard,
     VSwitch,
+    VDivider,
     transitions
   }
 })
