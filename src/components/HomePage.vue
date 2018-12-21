@@ -336,6 +336,38 @@
                   </v-list-tile-content>
                 </v-list-tile>
               </v-list>
+              <v-list-tile-action>
+                    <v-icon class="blue--text text--lighten-2">Insta</v-icon>
+                  </v-list-tile-action>
+                  <v-list-tile-content>
+                    <v-list-tile-title>gdgaddis</v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+              </v-list>
+              <v-list-tile-action>
+                    <v-icon class="blue--text text--lighten-2">face</v-icon>
+                  </v-list-tile-action>
+                  <v-list-tile-content>
+                    <v-list-tile-title>gdgaddis</v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+              </v-list>
+              <v-list-tile-action>
+                    <v-icon class="blue--text text--lighten-2">teleg</v-icon>
+                  </v-list-tile-action>
+                  <v-list-tile-content>
+                    <v-list-tile-title>@GDG-Addis</v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+              </v-list>
+     <v-list-tile-action>
+                    <v-icon class="blue--text text--lighten-2">twitter</v-icon>
+                  </v-list-tile-action>
+                  <v-list-tile-content>
+                    <v-list-tile-title>gdg_addis</v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+              </v-list>
             </v-card>
           </v-flex>
         </v-layout>
