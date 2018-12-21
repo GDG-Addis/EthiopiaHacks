@@ -50,14 +50,40 @@
       <v-container fluid></v-container>
     </v-content>
     <v-navigation-drawer temporary :right="right" v-model="rightDrawer" fixed>
-      <v-list>
-        <v-list-tile>
-          <v-list-tile-action>
-            <v-icon light>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Announcements</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
+     
+     <v-layout justify-center>
+       <h2 class="heading" justify-center> Annoucement </h2>
+     </v-layout>
+
+     <v-layout>
+        <v-flex xs12>
+          
+          <v-card>
+            <v-card-text>
+              <p>Registration for Hackathon v2.0 is now open! </p>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-btn flat color="orange">More</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-flex>
+  </v-layout>
+
+  <v-layout>
+        <v-flex xs12>
+          
+          <v-card>
+            <v-card-text>
+              <p>Team selection for Hackathon v2.0 is under going </p>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-btn flat color="orange">More</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-flex>
+  </v-layout>
     </v-navigation-drawer>
     <v-footer :fixed="fixed" app>
       <span

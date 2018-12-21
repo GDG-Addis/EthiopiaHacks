@@ -189,9 +189,11 @@
               fill-dot
               :icon="timeline.icon"
             >
-              <v-card :color="timeline.color" dark>
-                <v-card-title class="title"> {{timeline.title}} </v-card-title>
-                <v-card-text class="white text--primary">
+              <v-card>
+                <v-card-title :class="timeline.color">
+                  <h2 class="title">{{timeline.title}}</h2>
+                </v-card-title>
+                <v-card-text>
                   <p>{{timeline.theme}}</p>
                   <p>{{timeline.description}}</p>
                   <v-btn v-if="timeline.isPassed" color="success" outline class="mx-0">Passed</v-btn>
@@ -392,7 +394,7 @@ export default {
           isPassed: false,
           isNext: true,
           isLeft: true,
-          color: "purple darken-1",
+          color: "purple lighten-1",
           icon: "star"
         },
         {
@@ -422,7 +424,7 @@ export default {
           isPassed: false,
           isNext: false,
           isLeft: false,
-          color: "indigo",
+          color: "indigo lighten-1",
           icon: "star"
         }
       ]
