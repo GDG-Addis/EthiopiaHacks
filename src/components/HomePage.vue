@@ -398,7 +398,7 @@ export default {
           answer: 'Basics of programming is enough.'
         },
         {
-          question: 'How much do I have to pay to attend the hackathon? ',
+          question: 'How much do I have to pay to attend? ',
           answer: 'It’s FREE. :)'
         },
         {
