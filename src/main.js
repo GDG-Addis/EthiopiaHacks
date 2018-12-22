@@ -19,6 +19,7 @@ import {
   VCard,
   VSwitch,
   VDivider,
+  VTabs,
   transitions,
   
 } from 'vuetify'
@@ -40,6 +41,7 @@ Vue.use(Vuetify, {
     VCard,
     VSwitch,
     VDivider,
+    VTabs,
     transitions
   }
 })
