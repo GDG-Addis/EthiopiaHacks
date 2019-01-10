@@ -112,7 +112,7 @@
           
           <v-card>
             <v-card-text>
-              <p>Team selection for Hackathon v2.0 is under going </p>
+              <p>Team selection for Hackathon v2.0 is undergoing </p>
             </v-card-text>
 
             <v-card-actions>
