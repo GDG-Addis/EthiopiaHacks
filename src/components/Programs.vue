@@ -1,29 +1,22 @@
 <template>
   <div>
-    <v-toolbar tabs color="primary" dark>
+    <v-toolbar tabs>
 
       <v-toolbar-title>Hackathon v1.0 <span class="subheading">"Youth and Entrepreneurship"</span></v-toolbar-title>
       
 
       <v-spacer></v-spacer>
 
-      <v-btn icon>
-        <v-icon>search</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>more_vert</v-icon>
-      </v-btn>
+      <span class="caption">Nov 16 to 18, 2018 @American Center, Addis Ababa</span>
+     
 
       <v-tabs
         slot="extension"
         v-model="tabs"
         fixed-tabs
-        color="primary"
         icons-and-text
         centered
 
-        dark
       >
         <v-tabs-slider></v-tabs-slider>
 
@@ -34,12 +27,17 @@
       </v-tabs>
     </v-toolbar>
 
-    <v-tabs-items v-model="tabs" class="white elevation-1">
+    <v-tabs-items v-model="tabs" class="elevation-1">
       <v-tab-item v-for="(tab, i) in tabList" :id="'tab-' + i" :key="i">
           <v-card flat>
             <v-card-text>
               <intro-page v-if="i == 0"></intro-page>
               <teams-page v-if="i == 1"></teams-page>
+              <schedule-page v-if="i == 2"></schedule-page>
+              <guideline-page v-if="i == 3"></guideline-page>
+              <winners-page v-if="i == 4"></winners-page>
+              <gallery-page v-if="i == 5"></gallery-page>
+              <discussion-page v-if="i == 6"></discussion-page>
               
               </v-card-text>
           </v-card>
@@ -51,11 +49,21 @@
 
 import Intro from './programPages/Intro.vue';
 import Teams from './programPages/Teams.vue';
+import Schedule from './programPages/Schedule.vue';
+import Guideline from './programPages/Guideline.vue';
+import Winners from './programPages/Winners.vue';
+import Gallery from './programPages/Gallery.vue';
+import Discussion from './programPages/Discussion.vue';
 
 export default {
   components: {
     'intro-page': Intro,
-    'teams-page': Teams
+    'teams-page': Teams,
+    'schedule-page': Schedule,
+    'guideline-page': Guideline,
+    'winners-page': Winners,
+    'gallery-page': Gallery,
+    'discussion-page': Discussion
   },
   data() {
     return {
@@ -74,11 +82,7 @@ export default {
           icon: "timer",
         },
         {
-          title: "Judging",
-          icon: "how_to_vote"
-        },
-        {
-          title: "Rules",
+          title: "Guideline",
           icon: "book"
         },
         {
