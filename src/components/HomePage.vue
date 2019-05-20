@@ -22,8 +22,8 @@
       <v-layout column wrap class="my-5" align-center>
         <v-flex xs12 sm4 class="my-3">
           <div class="text-xs-center">
-            <h2 class="headline">The best way to demonistrate your coding skill</h2>
-            <span class="subheading">while solving potential problems</span>
+            <h2 class="headline">The best way to demonstrate your coding skill</h2>
+            <span class="subheading">while solving real-life challenges</span>
           </div>
         </v-flex>
         <v-flex xs12>
@@ -38,9 +38,9 @@
                     <div class="headline text-xs-center">Design The Challenge</div>
                   </v-card-title>
                   <v-card-text>
-                    Hackathon boosts your design skill and critical thinking towards solving the challenge. It gives you the opportunity to improve your
-                    skill on how to understand the problem domain or the challenge topic, analze and come up with potential
-                    ,feasible solution.
+                    Hackathons help focus your design and critical thinking skills towards
+                     solving challenges.  You get the opportunity to understand the problem, 
+                     analyze it, and come up with feasible solutions.
                   </v-card-text>
                 </v-card>
               </v-flex>
@@ -53,9 +53,9 @@
                     <div class="headline">Build The Solution</div>
                   </v-card-title>
                   <v-card-text>
-                    You will build digital solution that trully solves the problem. By collaboration with a team, you
-                    will learn how to coordinate to build the designed solution. You will demonistrate your skill
-                    within a short period of time. You will also learn new skills from the teams.
+                    This is about results! You will build digital solution that 
+                    truly solves a problem. Team collaboration helps to develop 
+                    coordination capacity, share experience, and develop a network of partners. 
                   </v-card-text>
                 </v-card>
               </v-flex>
@@ -68,8 +68,9 @@
                     <div class="headline text-xs-center">Win Big Prizes</div>
                   </v-card-title>
                   <v-card-text>
-                    You will get big prizes for your outstanding solution/product. You will also get exposure to the
-                    potential stakeholders to work on the winning project. This award is a complement for your passion.
+                    The teams with the top solutions will receive prizes,
+                     but everyone benefits from the experience and will have 
+                     the chance to show their ideas to potential stakeholders.  
                   </v-card-text>
                 </v-card>
               </v-flex>

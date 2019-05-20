@@ -94,7 +94,11 @@
         <v-flex xs12>
           <v-card>
             <v-card-text>
+<<<<<<< HEAD
               <p>Team selection for Hackathon v2.0 is under going</p>
+=======
+              <p>Team selection for Hackathon v2.0 is undergoing </p>
+>>>>>>> a676acda3e5803158470e8d3babe98359202e349
             </v-card-text>
 
             <v-card-actions>

@@ -22,6 +22,11 @@ export default new Router({
       path: '/programs',
       name: 'Programs',
       component: Programs
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: HomePage
     }
   ]
 })
