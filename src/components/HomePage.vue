@@ -2,9 +2,9 @@
   <div>
     <!-- First Parallex -->
     <section id="home">
-      <v-parallax :src="getImageUrl('banner.jpg')" height="680" alt="banner image">
+      <v-parallax :src="this.getImageUrl('banner.jpg')" height="680" alt="banner image">
         <v-layout column align-center justify-center class="white--text">
-          <img :src="getImageUrl('logo.png')" alt="Hackathon Logo" height="300">
+          <img :src="this.getImageUrl('logo.png')" alt="Hackathon Logo" height="300">
           <h3 class="display-1 text-xs-center">U.S Embassy in Ethiopia presents</h3>
           <h3 class="white--text font-weight-bold mb-2 display-2 text-xs-center">
             Hackathon
@@ -304,8 +304,10 @@
 
 <script>
 import * as easings from "vuetify/es5/util/easing-patterns";
+import appMixins from "../mixins/appMixins.js";
 
 export default {
+  mixins: [appMixins],
   data() {
     return {
       title: '"Ethiopia Hacks" Hackathon v2.0',
@@ -432,9 +434,7 @@ export default {
   },
 
   methods: {
-    getImageUrl(img) {
-      return require("../assets/images/" + img);
-    }
+    
   }
 };
 </script>

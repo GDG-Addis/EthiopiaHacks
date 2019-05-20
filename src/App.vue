@@ -14,48 +14,33 @@
 
         <!-- Iterate throgh menus  -->
         <dev v-for="(menu, k) in menus" :key="k">
-          
           <!-- If the menu has sub-menu, draw list group -->
-          <v-list-group v-if="menu.isParent"
-          value="true"
-          no-action
-          :prepend-icon="menu.icon"
-        >
-          
-          <v-list-tile slot="activator">
-            <v-list-tile-title v-text="menu.title"></v-list-tile-title>
+          <v-list-group v-if="menu.isParent" value="true" no-action :prepend-icon="menu.icon">
+            <v-list-tile slot="activator">
+              <v-list-tile-title v-text="menu.title"></v-list-tile-title>
+            </v-list-tile>
+
+            <v-list-tile v-for="(child, i) in menu.children" :key="i" :to="child.to">
+              <v-list-tile-action>
+                <v-icon v-html="child.icon"></v-icon>
+              </v-list-tile-action>
+
+              <v-list-tile-content>
+                <v-list-tile-title v-text="child.title"></v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+          </v-list-group>
+
+          <!-- Else, Draw noraml navigation menu -->
+          <v-list-tile v-if="!menu.isParent" router :to="menu.to" exact>
+            <v-list-tile-action>
+              <v-icon v-html="menu.icon"></v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title v-text="menu.title"></v-list-tile-title>
+            </v-list-tile-content>
           </v-list-tile>
-
-          <v-list-tile
-            v-for="(child, i) in menu.children"
-            :key="i"
-            :to="child.to"
-          >
-          <v-list-tile-action>
-            <v-icon v-html="child.icon"></v-icon>
-          </v-list-tile-action>
-
-          <v-list-tile-content>
-            <v-list-tile-title v-text="child.title"></v-list-tile-title>
-          </v-list-tile-content>
-          </v-list-tile>
-
-        </v-list-group>
-
-        <!-- Else, Draw noraml navigation menu -->
-        <v-list-tile v-if="!menu.isParent" router :to="menu.to"  exact>
-          <v-list-tile-action>
-            <v-icon v-html="menu.icon"></v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title v-text="menu.title"></v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-
-
         </dev>
-        
-        
       </v-list>
     </v-navigation-drawer>
 
@@ -87,17 +72,15 @@
       <v-container fluid></v-container>
     </v-content>
     <v-navigation-drawer temporary :right="right" v-model="rightDrawer" fixed>
-     
-     <v-layout justify-center>
-       <h2 class="heading" justify-center> Annoucement </h2>
-     </v-layout>
+      <v-layout justify-center>
+        <h2 class="heading" justify-center>Annoucement</h2>
+      </v-layout>
 
-     <v-layout>
+      <v-layout>
         <v-flex xs12>
-          
           <v-card>
             <v-card-text>
-              <p>Registration for Hackathon v2.0 is now open! </p>
+              <p>Registration for Hackathon v2.0 is now open!</p>
             </v-card-text>
 
             <v-card-actions>
@@ -105,14 +88,13 @@
             </v-card-actions>
           </v-card>
         </v-flex>
-  </v-layout>
+      </v-layout>
 
-  <v-layout>
+      <v-layout>
         <v-flex xs12>
-          
           <v-card>
             <v-card-text>
-              <p>Team selection for Hackathon v2.0 is under going </p>
+              <p>Team selection for Hackathon v2.0 is under going</p>
             </v-card-text>
 
             <v-card-actions>
@@ -120,7 +102,7 @@
             </v-card-actions>
           </v-card>
         </v-flex>
-  </v-layout>
+      </v-layout>
     </v-navigation-drawer>
     <v-footer :fixed="fixed" app>
       <span
@@ -132,6 +114,8 @@
 
 <script>
 import * as easings from "vuetify/es5/util/easing-patterns";
+
+
 
 export default {
   computed: {
@@ -167,14 +151,13 @@ export default {
           icon: "home",
           title: "Home",
           to: "/",
-          isParent: false,
-
+          isParent: false
         },
         {
           icon: "question_answer",
           title: "About",
           to: "/about",
-          isParent: false,
+          isParent: false
         },
         {
           icon: "bubble_chart",
@@ -198,7 +181,7 @@ export default {
           icon: "dashboard",
           title: "Gallery",
           to: "/gallery",
-          isParent: false,
+          isParent: false
         }
       ],
       miniVariant: false,
@@ -215,7 +198,12 @@ export default {
     scroll: function(dest) {
       this.selector = dest;
       this.$vuetify.goTo(this.target, this.options);
+    },
+    methods: {
+      changeLocale(locale) {
+        i18n.locale = locale;
+      }
     }
-  }
+  }//end of methods
 };
 </script>

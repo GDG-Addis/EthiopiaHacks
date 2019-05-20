@@ -21,9 +21,11 @@ import {
   VDivider,
   VTabs,
   transitions,
+  VSlider,
   
 } from 'vuetify'
 import '../node_modules/vuetify/src/stylus/app.styl'
+
 
 Vue.use(Vuetify, {
   components: {
@@ -42,11 +44,15 @@ Vue.use(Vuetify, {
     VSwitch,
     VDivider,
     VTabs,
-    transitions
+    transitions,
+    VSlider
   }
 })
 
 Vue.config.productionTip = false
+
+
+
 
 /* eslint-disable no-new */
 new Vue({

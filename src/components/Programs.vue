@@ -1,8 +1,8 @@
 <template>
   <div>
-    <v-toolbar tabs color="primary" dark>
+    <v-toolbar tabs>
 
-      <v-toolbar-title>Hackathon v1.0</v-toolbar-title>
+      <v-toolbar-title>Hackathon v1.0 <span class="subheading">Youth and Entrepreunership</span> </v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -18,7 +18,6 @@
         slot="extension"
         v-model="tabs"
         fixed-tabs
-        color="primary"
         icons-and-text
         centered
 
@@ -50,22 +49,47 @@
       </v-tabs>
     </v-toolbar>
 
-    <v-tabs-items v-model="tabs" class="white elevation-1">
+    <v-tabs-items v-model="tabs" class="elevation-1">
       <v-tab-item v-for="i in 6" :id="'tab-' + i" :key="i">
-          <v-card flat>
-            <v-card-text>{{ text }}</v-card-text>
-          </v-card>
+        <v-container fluid>
+          <intro v-if="i == 1"></intro>
+          <team v-if="i == 2"></team>
+          <schedule v-if="i == 3"></schedule>
+          <winner v-if="i == 4"></winner>
+          <gallery v-if="i == 5"></gallery>
+          <discussion v-if="i == 6"></discussion>
+        </v-container>
+          
         </v-tab-item>
     </v-tabs-items>
   </div>
 </template>
 <script>
+
+import Introduction from './programs/Introduction.vue';
+import Teams from './programs/Teams.vue';
+import Schedules from './programs/Schedules.vue'
+import Winners from './programs/Winners.vue'
+import Gallery from './programs/Gallery.vue'
+import Discussion from './programs/Discussion.vue'
+
+//Mixins
+import appMixins from "../mixins/appMixins.js";
+
 export default {
+  mixins: [appMixins],
+  components:{
+    "intro":Introduction,
+    "team": Teams,
+    "schedule": Schedules,
+    "winner": Winners,
+    "gallery": Gallery,
+    "discussion": Discussion
+  },
   data() {
     return {
       tabs: null,
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      
     };
   }
 };
