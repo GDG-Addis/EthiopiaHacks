@@ -130,7 +130,7 @@
               <v-flex xs12 md3>
                 <v-card class="elevation-0 transparent" href="https://www.meetup.com/GDG-Addis" target="blank">
                   <v-card-text class="text-xs-center">
-                    <img :src="getImageUrl('gdg_addis.png')" alt="Hackathon Logo" height="150">
+                    <img :src="getImageUrl('new_gdgaddis_logo.jpg')" alt="Hackathon Logo" height="150">
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
                     <div class="subheading text-xs-center">GDG Addis</div>
