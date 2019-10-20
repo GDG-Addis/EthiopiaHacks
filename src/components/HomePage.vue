@@ -409,13 +409,7 @@ export default {
       
       {
           question: 'Why should I attend the hackathon? ',
-          answer: 'Why not? It’s a win- win situation for you. 
-          And here’s why:
-•  FREE FOOD.
-•  FREE SWAG
-•  Awards
-•  Meet new people
-•  LEARN.'
+          answer: 'Why not? It’s a win- win situation for you.  And here’s why: •  FREE FOOD •  FREE SWAG •  Awards •  Meet new people •  LEARN.'
         },
         
         {
