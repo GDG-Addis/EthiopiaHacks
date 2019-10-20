@@ -399,17 +399,18 @@ export default {
         },
         {
           question: 'How much do I have to pay to attend? ',
-          answer: 'It’s FREE. :)'
+          answer: 'It’s FREE. :'
         },
         {
           question: 'Is it a team event?',
           answer: ' Yes. So the whole point of forming teams and working on a project gives you the opportunity to work in a real life setting. I mean seriously, that’s how it works in the industry. You have to learn to work with people from different background, different skill set, etc. What better way than a hackathon to get used to it? Teams include a maximum of 5 people. Our hackathons have “Meet-and-Greet” events before the actual event where you get to talk to attendees and look for teammates.'
-        }
-      ],
+        },
+
       
-      {
+        {
           question: 'Why should I attend the hackathon? ',
-          answer: 'Why not? It’s a win- win situation for you.  And here’s why: •  FREE FOOD •  FREE SWAG •  Awards •  Meet new people •  LEARN.'
+          answer:'Why not? It’s a win- win situation for you.  And here’s why: •  FREE FOOD •  FREE SWAG •  Awards •  Meet new people •  LEARN.' 
+          
         },
         
         {
@@ -417,9 +418,10 @@ export default {
           answer: 'You can build anything. A website, a web app, Android/iOS App, Chrome extension, whatever you want to on a specific theme that will be given on the hackathon day.'
         },
         
-
+],
       lorem:
         "Lorem ipsum dolor sit amet, at aliquam vivendum vel, everti delicatissimi cu eos. Dico iuvaret debitis mel an, et cum zril menandri. Eum in consul legimus accusam. Ea dico abhorreant duo, quo illum minimum incorrupte no, nostro voluptaria sea eu. Suas eligendi ius at, at nemore equidem est. Sed in error hendrerit, in consul constituam cum."
+              
     };
   },
 
