@@ -25,7 +25,7 @@ import {
   VImg,
   transitions,
   VSlider,
-  
+
 } from 'vuetify'
 import '../node_modules/vuetify/src/stylus/app.styl'
 
@@ -48,14 +48,9 @@ Vue.use(Vuetify, {
     VSwitch,
     VDivider,
     VTabs,
-<<<<<<< HEAD
-    transitions,
-    VSlider
-=======
     VSheet,
     VImg,
     transitions
->>>>>>> a676acda3e5803158470e8d3babe98359202e349
   }
 })
 
