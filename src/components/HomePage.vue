@@ -359,7 +359,7 @@ export default {
           answer: "Basics of programming is enough."
         },
         {
-          question: "How much do I have to pay to attend the hackathon? ",
+          question: "How much do I have to pay to attend? ",
           answer: "It’s FREE. :)"
         },
         {
@@ -373,7 +373,7 @@ export default {
             "You can build anything. A website, a web app, Android/iOS App, Chrome extension, whatever you want to on a specific theme that will be given on the hackathon day."
         },
         {
-          question: "What are the requirements to attend on the hackathon?",
+          question: "What are the requirements to attend?",
           answer:
             "One requirement is your age must be between 18 to 25. Another requirement is you need to be willing to attend the hackathon for 48 hours."
         }
